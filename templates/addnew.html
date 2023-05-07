@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<form action = "/add" method = "post"> 
+    <div class="mb-3">
+        <label>Name</label>
+        <input type = "text" name = "customer_name" placeholder = "customer_name" class="form-control" />
+    </div> 
+    <div class="mb-3">
+        <label>Id Headquarter</label>
+        <input type = "text" name = "id_headquarter" placeholder = "id_headquarter" class="form-control" />
+    </div> 
+    <div class="mb-3">
+        <label>Phone Number</label>
+        <input type = "text" name = "phone_number" placeholder = "phone_number" class="form-control" />
+    </div> 
+    <div class="mb-3">
+        <label>Address</label>
+        <input type = "text" name = "address" placeholder = "address" class="form-control" />
+    </div> 
+    <input type = "submit" value = "Submit" class="btn btn-primary mb-3"/>  
+ </form> 
+  
+{% endblock content %}
