@@ -29,9 +29,9 @@ async def home(request: Request, cursor: pyodbc.Cursor = Depends(connect)):
     return templates.TemplateResponse("index.html", {"request": request, "customers": rows})
 
 @app.post("/add")
-async def add(request: Request, customer_name: str = Form(...), id_headquarter: str = Form(...), phone_number: str = Form(...), address: str = Form(...), cursor: pyodbc.Cursor = Depends(connect)):
+async def add(request: Request, customer_name: str = Form(...), phone_number: str = Form(...), address: str = Form(...), cursor: pyodbc.Cursor = Depends(connect)):
     # print(f"insert into [customer] (name, id_headquarter, phone_number, address) values  ('{customer_name}', '{id_headquarter}', '{phone_number}', '{address}');")
-    cursor.execute(f"insert into [customer] (name, id_headquarter, phone_number, address) values  ('{customer_name}', '{id_headquarter}', '{phone_number}', '{address}');")
+    cursor.execute(f"insert into [customer] (name, id_headquarter, phone_number, address) values  ('{customer_name}', '{1}', '{phone_number}', '{address}');")
     cursor.commit()
     return RedirectResponse(url=app.url_path_for("home"), status_code=status.HTTP_303_SEE_OTHER)
 

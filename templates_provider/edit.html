@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+    <form action="/update/{{provider[0]}}" method="post">
+        <div class="mb-3">
+            <label>Name</label>
+            <input type = "text" name = "provider_name" placeholder = "provider_name" class="form-control" value="{{provider[1]}}"/>
+        </div> 
+        <div class="mb-3">
+            <label>Phone Number</label>
+            <input type = "text" name = "phone_number" placeholder = "phone_number" class="form-control" value="{{provider[3]}}"/>
+        </div> 
+        <input type = "submit" value = "Update" class="btn btn-primary mb-3"/>  
+     </form> 
+{% endblock content %}

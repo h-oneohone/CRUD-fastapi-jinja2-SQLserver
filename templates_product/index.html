@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Home</h1>
+        <a href="addnew/" class="btn btn-primary">Add New</a>
+        <br><br>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Id Provider</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th width="200">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product[0] }}</td>
+                    <td>{{ product[1] }}</td>
+                    <td>{{ product[2] }}</td>
+                    <td>{{ product[3] }}</td>
+                    <td>{{ product[4] }}</td>
+                    <td>
+                        <a href="edit/{{ product[0] }}" class="btn btn-warning">Edit</a>
+                        <a href="delete/{{ product[0] }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock content %}
