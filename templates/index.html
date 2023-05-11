@@ -10,10 +10,10 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Id Headquarter</th>
-                    <th>Phone Number</th>
+                    <!-- <th>Name</th> -->
+                    <!-- <th>Id Headquarter</th> -->
                     <th>Address</th>
+                    <th>Budget</th>
                     <th width="200">Action</th>
                 </tr>
             </thead>
@@ -21,10 +21,10 @@
                 {% for customer in customers %}
                 <tr>
                     <td>{{ customer[0] }}</td>
-                    <td>{{ customer[1] }}</td>
+                    <!-- <td>{{ customer[1] }}</td> -->
+                    <!-- <td>{{ customer[2] }}</td> -->
                     <td>{{ customer[2] }}</td>
                     <td>{{ customer[3] }}</td>
-                    <td>{{ customer[4] }}</td>
                     <td>
                         <a href="edit/{{ customer[0] }}" class="btn btn-warning">Edit</a>
                         <a href="delete/{{ customer[0] }}" class="btn btn-danger">Delete</a>
