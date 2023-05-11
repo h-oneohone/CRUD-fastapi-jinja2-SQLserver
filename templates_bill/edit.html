@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+    <form action="/update/{{bill[0]}}/{{bill[2]}}" method="post">
+        <div class="mb-3">
+            <label>Id Customer<</label>
+            <input type = "text" name = "id_customer" placeholder = "id_customer" class="form-control" value="{{bill[1]}}"/>
+        </div> 
+        <div class="mb-3">
+            <label>Id Product</label>
+            <input type = "text" name = "id_product" placeholder = "id_product" class="form-control" value="{{bill[2]}}"/>
+        </div> 
+        <div class="mb-3">
+            <label>Quantity</label>
+            <input type = "text" name = "quantity" placeholder = "quantity" class="form-control" value="{{bill[3]}}"/>
+        </div> 
+        <input type = "submit" value = "Update" class="btn btn-primary mb-3"/>  
+     </form> 
+{% endblock content %}

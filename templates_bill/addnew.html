@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<form action = "/add" method = "post"> 
+    <!-- <div class="mb-3">
+        <label>Name</label>
+        <input type = "text" name = "provider_name" placeholder = "bill_name" class="form-control" />
+    </div>  -->
+    <!-- <div class="mb-3">
+        <label>Id Headquarter</label>
+        <input type = "text" name = "id_headquarter" placeholder = "id_headquarter" class="form-control" />
+    </div>  -->
+    <div class="mb-3">
+        <label>Id Customer<</label>
+        <input type = "text" name = "id_customer" placeholder = "id_customer" class="form-control" />
+    </div> 
+    <div class="mb-3">
+        <label>Id Product</label>
+        <input type = "text" name = "id_product" placeholder = "id_product" class="form-control"/>
+    </div> 
+    <div class="mb-3">
+        <label>Quantity</label>
+        <input type = "text" name = "quantity" placeholder = "quantity" class="form-control"/>
+    </div> 
+    
+
+    <input type = "submit" value = "Submit" class="btn btn-primary mb-3"/>  
+ </form> 
+  
+{% endblock content %}

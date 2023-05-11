@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>Home</h1>
+        <a href="addnew/" class="btn btn-primary">Add New</a>
+        <br><br>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <!-- <th>Name</th> -->
+                    <th>Id Customer</th>
+                    <th>Id Product</th>
+                    <th>Quantity</th>
+                    <th width="200">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bill in bills %}
+                <tr>
+                    <td>{{ bill[0] }}</td>
+                    <td>{{ bill[1] }}</td>
+                    <td>{{ bill[2] }}</td>
+                    <td>{{ bill[3] }}</td>
+                    <td>
+                        <a href="edit/{{ bill[0] }}" class="btn btn-warning">Edit</a>
+                        <a href="delete/{{ bill[0] }}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock content %}
